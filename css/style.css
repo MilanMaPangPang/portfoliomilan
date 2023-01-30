@@ -1,0 +1,645 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #373737;
+}
+
+/*Hieronder zie je de onderdelen van de Navigatiebalk*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  color: white;
+  margin: 1.5rem;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  margin: 1rem;
+  list-style: none;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+section{
+  padding-top: 8px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 750px) {
+  ul li a {
+    display: none;
+  }
+}
+
+ul li a:hover {
+  border-bottom: 1px solid white;
+}
+ul li:hover {
+  transform: scale(1.3);
+  transition: 1s;
+}
+
+.icon i {
+  color: white;
+  margin: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .icon i {
+    visibility: hidden;
+  }
+}
+
+.icon i:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+#bars {
+  display: none;
+  color: white;
+  margin: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  #bars {
+    display: block;
+  }
+}
+
+/*Hieronder zie je de onderdelen van de Homepage*/
+
+.homeimage {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../IMG/homepageimage1.jpg);
+}
+
+@media only screen and (max-width: 1000px) {
+  .homeimage {
+    height: 100vh;
+    width: 100%;
+    background-image: none;
+    background-color: #373737;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .homeimage {
+    height: 100vh;
+    width: 100%;
+    background-image: none;
+    background-color: #373737;
+  }
+}
+
+.imagehome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .imagehome {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.contertit1 {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.contertit1 h2 {
+  width: 220px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 18rem;
+  animation: contertit1 2s infinite;
+  position: relative;
+  animation-iteration-count: initial;
+}
+
+@media only screen and (max-width: 800px) {
+  .contertit1 h2 {
+    visibility: hidden;
+  }
+}
+
+@keyframes contertit1 {
+  from {
+    top: -400px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.contertit2 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 500px;
+  margin: 8rem;
+  margin-top: 18rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .contertit2 img {
+    margin-top: -15rem;
+  }
+}
+
+#aboutme {
+  border-radius: 25px;
+  background-color: white;
+  padding: 0.5rem;
+  width: 150px;
+}
+
+
+
+/*Hieronder zie je het onderdeel UpToDate*/
+
+.uptodatemain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uptodate {
+  position: absolute;
+  height: 4rem;
+  width: 12rem;
+  background-color: red;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  border: 2px solid black;
+}
+
+.uptodate a{
+  text-decoration: none;
+  color: white;
+}
+
+.uptodatemain :hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+@keyframes uptodatemain {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .uptodatemain {
+    animation-name: uptodatemain;
+    animation-duration: 2s;
+    animation-iteration-count: initial;
+  }
+}
+
+/*Hieronder zie je de onderdelen van de pagina blog*/
+
+.mywork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem;
+  
+}
+
+.mywork-title {
+  border: rgb(255, 255, 255) solid 2px;
+  border-radius: 200px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.linemain {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  height: 2px;
+  width: 280px;
+  margin-top: 80px;
+  background: black;
+}
+
+.vierblokken {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.vierblokken :hover{
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+.blok1 {
+  height: 450px;
+  width: 320px;
+  background: linear-gradient(0.25turn, #5e5d5d, #a9a9a9, #5e5d5d);
+}
+
+@media only screen and (max-width: 1400px) {
+  .vierblokken {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .vierblokken {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.underlinemain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline {
+  width: 80%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 4rem;
+}
+
+h1 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: -3rem;
+}
+
+.tekst1{
+  height: 500px;
+  width: 280px;
+  margin-top: 2rem;
+  color: rgb(0, 0, 0);
+  margin-left: 0.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 1.5rem;
+}
+
+.mainhtml1{
+  background-color: rgb(255, 255, 255);
+width: 95%;
+}
+
+.html1{
+background-color: red;
+margin-top: 8rem;
+}
+
+.mainhtml2{
+  background-color: rgb(255, 255, 255);
+width: 95%;
+}
+
+.html2{
+background-color: red;
+margin-top: 11.2rem;
+}
+
+.mainhtml3{
+  background-color: rgb(255, 255, 255);
+width: 95%;
+}
+
+.html3{
+background-color: rgb(255, 0, 0);
+margin-top: 9rem;
+}
+
+
+/*Hieronder begint de pagina over About Me*/
+
+.aboutmetekstmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+}
+
+.aboutmetekst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.mywork-twee {
+  display: flex;
+  justify-content: center;
+}
+
+.mywork-textbox {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 400px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 40px;
+  background-color: #464646;
+}
+
+.wywork-java {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.mywork-tekst{
+  height: 500px;
+  width: 300px;
+  margin-top: 2rem;
+  color: rgb(255, 255, 255);
+  margin-left: 0.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imgextra img {
+  border-radius: 40px;
+  margin: 3rem;
+  width: 600px;
+}
+
+.imgbox {
+  height: 500px;
+  width: 800px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #3d3d3d;
+}
+
+.underlinemain1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline1 {
+  width: 80%;
+  height: 4px;
+  background: rgb(255, 255, 255);
+  margin-top: 4rem;
+}
+
+/*Hieronder begint de pagina over work*/
+
+.workcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.behindblok {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80rem;
+  height: 400px;
+  background-color: #6a6a6a;
+  border-radius: 40px;
+}
+
+.tekstblokwork {
+  height: 400px;
+  width: 50rem;
+  background-color: #d9d9d9;
+  border-radius: 40px;
+}
+
+.tekstblok2work {
+  height: 100%;
+  width: 15rem;
+  background-color: #d9d9d9;
+  border-radius: 40px;
+}
+
+@media only screen and (max-width: 1000px){
+  .tekstblok2work{
+    visibility: hidden;
+  }
+}
+
+/*Hieronder zie je een contact pagina*/
+
+.vierblokkencontact {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  align-self: center;
+  justify-items: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .vierblokkencontact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .vierblokkencontact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.blok2 {
+  height: 400px;
+  width: 320px;
+   background: linear-gradient(0.25turn, #5e5d5d, #a9a9a9, #5e5d5d);
+}
+
+.contacttekstmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem;
+}
+
+.contacttekst {
+  border: rgb(255, 255, 255) solid 2px;
+  border-radius: 200px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.iconcontact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  margin-top: 6rem;
+}
+
+.underlinecontactmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underlinecontact {
+  height: 2px;
+  width: 2rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.googlemaps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Hieronder zie je de footer*/
+
+footer{
+background-color: black;
+width: 100%;
+height: 12rem;
+margin-top: 6rem;
+}
+
+.footericon{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+.iconfooter a{
+  list-style: none;
+  text-decoration: none;
+}
+.iconfooter a i{
+  text-decoration: none;
+  gap: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+
+}
+
+.downloadbutton{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.downloadbutton button{
+  cursor: pointer;
+}
+
+.overzicht{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.overzicht a{
+  text-decoration: none;
+  color: white;
+}
+
+.overzicht :hover{
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+/*java script arrow*/
+
+#arrow{
+  position: fixed;
+  bottom: 3vh;
+  right: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
